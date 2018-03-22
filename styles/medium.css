@@ -1,0 +1,77 @@
+@media only screen and (min-width: 37.5em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+    header img {width:100px; float:left; margin-right: 10px;}
+    
+    header hr {display: none;}
+    
+    nav ul {display:flex; flex-direction: row; justify-content:center;}
+    
+    nav ul li { display: block; width: 120px; font-size: .6rem;}
+    
+    .dropdown-content {
+    position: absolute;
+}
+    .dropdown-content a {
+    text-align: left;
+}
+    
+  nav button { display:none; }  /* hamburger button does not need to be shown */
+  
+  section.forecast { display: block; }  /* show the 10-day forecast with the medium view and up */
+  
+ section.forecast table { width: 100%; border:1px solid black;text-align: center;}
+ section.forecast th {background-color:gray; color:black;}
+    
+    article { overflow: auto;}
+  article p.town-article img { width: 40%; float:right; }  /* responsive images */
+
+    div.current {
+    float: left;
+    padding-top: 15px;
+}
+    
+    section.summary{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 600px;
+    }
+    
+        .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+
+        justify-content: center;
+    }
+    
+    .gallery div{
+        max-width: 380px;
+        width:90%;
+    }
+    
+    .gallery div img{
+        max-width: 380px;
+        min-height: 280px;
+        width:90%;
+    }
+    
+.adventures{
+display:flex; flex-direction: row; justify-content: space-around;
+    max-width: 900px;
+}
+
+.adventures div{
+    font-size: .8rem; 
+    margin-right:20px;
+}
+    
+    .riverGuides div{
+    width:200px;margin:25px; min-height: 600px; display:inline-block;
+}
+  
+    .riverGuides div p{
+    min-height: 210px;
+}
+}

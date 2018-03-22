@@ -1,0 +1,324 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+.adventures{
+    max-width: 240px;
+    display:block; margin:auto;
+    margin-top:100px;
+    
+}
+
+.adventures div{
+    font-size: 0.98rem; 
+    width: 240px;
+    display: block;
+    margin-bottom: 30px;
+
+}
+
+.adventures div h3{
+    text-align:center;
+}
+
+.adventures div img{
+    max-width:100%;border:7px solid #206DB2; border-radius: 50%;
+}
+
+body {
+  font-size: 16px;
+  /* Declare the base font-family - from google font api or other */
+  font-family: 'Lato', sans-serif;
+}
+
+header, nav, main { /* the comma means apply the following CSS declarations to all of the listed elements */
+  /* Declare the maximum width and other main element rules to limit the stretch on wide views */
+    max-width: 1200px;
+    margin: auto;
+}
+
+header { }
+header h1 { font-family: 'Oswald', sans-serif; color: #206DB2; font-size:1.8em}
+header img { width: 85px; float:left; margin-right:10px; margin-bottom: 15px;}
+header .subheading {}
+
+nav { clear: both; background-color:lightgray; max-width:100%; }
+nav button {
+    float: right;
+    position: relative;
+    top: -65px;
+    left: -10px;
+}
+nav ul { list-style-type: none; max-width: 640px; background-color: lightgray; padding: 0; margin:auto; 
+}
+
+.navigation li { }
+
+.navigation.responsive { position:relative; }
+.navigation.responsive li { position:relative; display: block; }
+
+
+nav ul li { display:none; margin: 2px 0;}
+
+nav ul li a { display: block; text-decoration: none; color:darkblue; text-align: center; padding: 14px 16px; font-weight: bolder; font-size: 14px;}
+nav ul:first-of-type li.active , .dropdown-content a.active { font-weight: bolder; background-color:beige;}
+nav ul li a:hover { text-decoration: none; background-color: white;}
+
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown-content a:hover .dropdown-content{
+    background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+#slider { 
+    margin: auto; max-width:1500px;
+}
+
+#slider img{
+    display:none;
+    max-width: 100%;
+}
+
+#slider img:first-of-type{
+    display: block;
+}
+
+main {clear:left;}
+main h2 {}
+main picture { margin: 0 0 .2rem 2%; width:96%; }
+main picture img { width: 95%; }
+
+
+
+section.summary{
+    max-width: 500px;
+    margin: auto;
+}
+
+div.current {
+    float:none;
+    padding-top: 15px;
+}
+
+div.current img {
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+div.current strong {
+    padding-top: 7px;
+    float: left;
+}
+
+section.summary div{
+ /*   display: block;
+    width: 180px;
+    overflow: hidden;*/
+}
+
+section.summary div:first-of-type{
+    padding-top: 20px;
+    width: 120px;
+}
+
+section.forecast { display:none; }
+
+article { overflow: auto; word-spacing:0.3em; line-height: 150%; padding-bottom: 25px;}
+
+
+article p.town-article {
+    padding: 5px;
+}
+article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+width: 56%; /* fill the page in the small/phone view */
+margin: .35rem 2%;
+display:block;
+margin:auto;
+}
+
+.gallery div{
+            margin-left: 10px;
+}
+
+    .gallery div img{
+        max-width: 100%;
+        width:95%;
+
+    }
+
+    .gallery div img:hover{
+     cursor:pointer;
+    }
+
+
+footer { background-color: gainsboro; margin:auto;}
+footer aside { text-align: center;}
+footer>p {} /* This structure refers to p elements that are direct children of the footer element */
+
+footer .footer-bar {
+    text-align:center;
+    background-color:darkgray;
+    color:black;
+    
+    padding: 0;
+    margin: auto;
+    height: 20px;
+    
+}
+/* Other Class Selectors */
+
+.flex-outer{
+    width: 98%;
+}
+
+.flex-outer li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.flex-outer li label,
+.flex-outer li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+/*  text-transform: uppercase;*/
+}
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+ 
+.flex-outer > li > label + *,
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+.flex-outer li p {
+  margin: 0;
+}
+
+.flex-outer li input:not([type='checkbox']),
+.flex-outer li select,
+.flex-outer li textarea {
+  padding: 15px;
+    border: 1px solid #333;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+
+.flex-inner li {
+  width: 100px;
+}
+
+.maininfo{
+    min-height: 400px;
+    padding: 20px;
+}
+
+.displayInfo label{
+    width:100px;
+    display:inline-block;
+}
+
+
+
+.riverGuideBanner 
+{
+margin: auto; max-width:1500px;
+}
+
+.riverGuideBanner img{
+max-width:100%;
+}
+
+
+.riverGuides{
+    margin: auto; width:100%; max-width:760px;
+}
+
+.riverGuides div{
+margin:25px; display:block; overflow: auto;
+}
+
+
+
+.riverGuides img{
+    max-width:100%;
+}
+
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+} 
+
+#accordion div img { float:left; margin-right:10px;}

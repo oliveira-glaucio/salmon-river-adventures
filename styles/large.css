@@ -1,0 +1,77 @@
+@media only screen and (min-width: 64em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from medium to large/wide go in here */
+  header hr {display: none;}
+    
+    nav ul {display:flex; flex-direction: row; justify-content: space-around;}
+    
+    nav ul li { display: block; float:left; width: 150px; font-size: .8rem;}
+
+    .dropdown-content {
+    position: absolute;
+}
+    .dropdown-content a {
+    text-align: left;
+}
+    
+    header img { width: 128px; float:left; margin-right:10px;}
+    article p.town-article img { max-width: 50%;}
+    article { overflow: auto;}
+    section.forecast { display: block; }
+    
+    section.current{
+        float:left;
+    }
+    
+    div.current {
+    float: left;
+    padding-top: 15px;
+}
+    
+    section.summary{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 600px;
+    }
+    
+        .gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+
+        justify-content: center;
+    }
+    
+    .gallery div img{
+        max-width: 380px;
+        min-height: 280px;
+        width:100%;
+    }
+    
+    .gallery div img:hover {box-shadow: 5px 5px 10px gray; }
+    
+    .gallery div:hover{
+        text-shadow: 2px 2px 5px gray;cursor:pointer;
+    }
+    
+.adventures{
+display:flex; flex-direction: row; justify-content: space-around;
+    max-width: 900px;
+}
+
+.adventures div{
+    font-size: .8rem; 
+    margin-right:60px;
+}
+    
+ 
+    
+    .riverGuides div{
+    width:200px;margin:25px; min-height: 600px;display:inline-block;
+}
+    
+    .riverGuides div p{
+    min-height: 210px;
+}
+}
